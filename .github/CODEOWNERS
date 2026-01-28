@@ -1,0 +1,7 @@
+# By default, require reviews from the maintainers for all files.
+* @gemini-cli-extensions/ralph-maintainers
+
+# The following files don't need reviews from the release approvers.
+# These patterns override the rule above.
+**/*.md
+/docs/
