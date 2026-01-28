@@ -1,5 +1,7 @@
 # Ralph 🔄
 
+![Ralph Header](resources/header.png)
+
 Ralph is a self-referential development loop for the Gemini CLI. It allows an agent to iteratively work on a task, self-correcting and refining its output over multiple turns without manual user intervention.
 
 ### Core Concept
