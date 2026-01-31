@@ -7,7 +7,7 @@
           {
             "name": "ralph-loop",
             "type": "command",
-            "command": "${extensionPath}/hooks/stop-hook.sh",
+            "command": "node ${extensionPath}/hooks/stop-hook.js",
             "description": "The Ralph infinite loop mechanism"
           }
         ]

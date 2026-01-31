@@ -5,10 +5,10 @@ You are starting the Ralph loop.
 **Step 1: Initialization**
 Run the setup script to initialize the loop state:
 ```bash
-bash "${extensionPath}/scripts/setup.sh" $ARGUMENTS
+node "${extensionPath}/scripts/setup.js" $ARGUMENTS
 ```
 
-**Supported Arguments for setup.sh:**
+**Supported Arguments for setup.js:**
 - `--max-iterations <N>`: Maximum number of loop iterations.
 - `--completion-promise <TEXT>`: A text token that must be output to finish.
 

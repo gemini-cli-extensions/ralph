@@ -12,7 +12,7 @@ The loop happens **across agent turns**, explicitly controlled by the extension'
 4.  **Loop Continuation**: The hook evaluates state (max iterations, promises) and instructs the CLI to start a new turn using the **original prompt** and clears the agent's memory from the previous turn.
 5.  **Repeat**: This continues autonomously until completion (max iterations, promises) or user interruption.
 
-The `AfterAgent` hook in `hooks/stop-hook.sh` creates a **self-referential feedback loop** where:
+The `AfterAgent` hook in `hooks/stop-hook.js` creates a **self-referential feedback loop** where:
 -   **Stable Context & No Compaction**: The prompt never changes between iterations, and the **previous turn's conversational context is cleared**. This forces the agent to rely on the current state of the files rather than potentially stale or "compacted" chat history, ensuring maximum focus and reliability.
 -   **Persistent State**: The agent's previous work persists in files and git history.
 -   **Autonomous Improvement**: Each iteration allows the agent to see the current state of the codebase and improve upon its past work.
@@ -43,7 +43,7 @@ To use Ralph, you must enable hooks and preview features in your `~/.gemini/sett
 }
 ```
 
-> **Note**: `includeDirectories` is required so that the Gemini CLI can access and execute Ralph's internal scripts (`setup.sh`, `cancel.sh`) and hook logic located in the extension's installation directory.
+> **Note**: `includeDirectories` is required so that the Gemini CLI can access and execute Ralph's internal scripts (`setup.js`, `cancel.js`) and hook logic located in the extension's installation directory.
 
 ## Usage
 
