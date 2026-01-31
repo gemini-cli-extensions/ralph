@@ -119,7 +119,9 @@ cat <<EOF
   "decision": "deny",
   "reason": "$ORIGINAL_PROMPT",
   "systemMessage": "🔄 Ralph is starting iteration $NEW_ITERATION...",
-  "clearContext": true
+  "hookSpecificOutput": {
+    "clearContext": true
+  }
 }
 EOF
 
