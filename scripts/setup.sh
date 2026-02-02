@@ -41,22 +41,10 @@ fi
 # Parse arguments
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --max-iterations=*)
-      VALUE="${1#*=}"
-      [[ "$VALUE" =~ ^[0-9]+$ ]] || die "Invalid iteration limit: '$VALUE'"
-      MAX_ITERATIONS="$VALUE"
-      shift
-      ;;
     --max-iterations)
       [[ "${2:-}" =~ ^[0-9]+$ ]] || die "Invalid iteration limit: '${2:-}'"
       MAX_ITERATIONS="$2"
       shift 2
-      ;;
-    --completion-promise=*)
-      VALUE="${1#*=}"
-      [[ -n "$VALUE" ]] || die "Missing promise text."
-      COMPLETION_PROMISE="$VALUE"
-      shift
       ;;
     --completion-promise)
       [[ -n "${2:-}" ]] || die "Missing promise text."
