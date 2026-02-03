@@ -4,10 +4,26 @@ Display the Ralph help documentation. Do NOT use any other subagent for this. Es
 
 Summarize the available commands for the user:
 - `/ralph:loop <PROMPT> [OPTIONS]`: Start a Ralph loop.
+- `/ralph:status`: Check the current status of an active loop.
 - `/ralph:cancel`: Cancel an active Ralph loop and clean up all temporary files.
 - `/ralph:help`: Show this message.
 
 **Options:**
 - `--max-iterations <N>`: Stop after N iterations (default: 5).
 - `--completion-promise <TEXT>`: Only stop when the agent outputs `<promise>TEXT</promise>`.
+
+**Examples:**
+```bash
+# Basic loop with iteration limit
+/ralph:loop "Build a REST API" --max-iterations 10
+
+# Loop with completion promise
+/ralph:loop "Fix all linting errors" --completion-promise "ALL_CLEAN"
+
+# Combined options
+/ralph:loop "Implement feature X" --max-iterations 15 --completion-promise "FEATURE_COMPLETE"
+```
+
+**Troubleshooting:**
+For common issues and solutions, see TROUBLESHOOTING.md in the extension directory.
 """

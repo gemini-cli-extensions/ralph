@@ -1,0 +1,42 @@
+name: Test Ralph Extension
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y jq
+    
+    - name: Make scripts executable
+      run: |
+        chmod +x scripts/*.sh
+        chmod +x hooks/*.sh
+        chmod +x tests/*.sh
+    
+    - name: Run setup tests
+      run: bash tests/setup_test.sh
+    
+    - name: Run hook tests
+      run: bash tests/hook_test.sh
+    
+    - name: Run status tests
+      run: bash tests/status_test.sh
+    
+    - name: Validate scripts
+      run: |
+        bash -n scripts/setup.sh
+        bash -n scripts/cancel.sh
+        bash -n scripts/status.sh
+        bash -n scripts/validate.sh
+        bash -n hooks/stop-hook.sh

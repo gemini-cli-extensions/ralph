@@ -1,0 +1,9 @@
+description = "Check the status of the current Ralph loop."
+prompt = """
+You are checking the Ralph loop status.
+
+Run the status script to display the current loop state:
+```bash
+bash "${extensionPath}/scripts/status.sh"
+```
+"""

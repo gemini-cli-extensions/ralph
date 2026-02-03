@@ -28,6 +28,14 @@ Install the extension directly from GitHub:
 gemini extensions install https://github.com/gemini-cli-extensions/ralph --auto-update
 ```
 
+### Verify Installation
+
+After installing, validate your setup:
+
+```bash
+bash ~/.gemini/extensions/ralph/scripts/validate.sh
+```
+
 ## Configuration
 
 To use Ralph, you must enable hooks and preview features in your `~/.gemini/settings.json`:
@@ -60,6 +68,7 @@ Start a loop by using the `/ralph:loop` command followed by your task.
 
 ### Manual Controls
 
+- `/ralph:status`: Check the current status of an active loop.
 - `/ralph:cancel`: Stops an active loop and cleans up all state files.
 - `/ralph:help`: Displays detailed usage information and configuration tips.
 
