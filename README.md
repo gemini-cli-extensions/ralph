@@ -158,7 +158,7 @@ After uninstalling, you **MUST** manually remove the following entry from your `
 
 ## Special Thanks
 
-- **Geoffrey Huntley**: For the original ["Ralph Wiggum" technique]((https://ghuntley.com/ralph/) and the fundamental insight that "Ralph is a Bash loop."
+- **Geoffrey Huntley**: For the original ["Ralph Wiggum" technique](https://ghuntley.com/ralph/) and the fundamental insight that "Ralph is a Bash loop."
 - **Anthropic Engineering**: For their research on [Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents), which informs the design of stable agentic loops.
 - **Inspiration & Reference Implementations**:
     - [galz10/pickle-rick-extension](https://github.com/galz10/pickle-rick-extension)
